@@ -84,7 +84,7 @@ for i in range(len(questions)):
         money += levels[i]  # Money update kardi
         print("----------------------------------------------")
     else:
-        print("Ghalat Jawab! Afsoos, game yahin khatam hoti hai.")
+        print("Ghalat Jawab! Afsoos, is sawal ke paise nahi milenge. Agla sawal dekhein:")
         print("----------------------------------------------")
         continue  # agar jawab ghalat ho gaya hai tu agle par jao 
 

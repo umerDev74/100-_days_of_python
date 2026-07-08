@@ -1,4 +1,7 @@
+# --- TODAY WE LEARN ABOUT DOC STRING AND ALSO PEP-8 ------
 
-name=["milo","sarah","bruno","anasthesia","rosa"]
-namewith_o=[i for i in name if(len(i)) > 4]
-print(namewith_o)
+def square(n):
+    '''Takes in a number n,returns the square of n'''
+    print(n**2)
+square(5)
+print(square.__doc__)
