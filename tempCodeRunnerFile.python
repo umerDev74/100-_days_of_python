@@ -1,3 +1,16 @@
-info = {"carla", 19, False, 5,9, 1.9}
-for value in info:
-    print(value)
+num = {"n1","n2","n3"}
+num.add("n4")
+print(num)
+
+"""agar remove method me koi aisi chese remove karna jo set me hai hi nahi tu ye error de ga
+leikn agar ham dicard method use kare tu ye error nahi de ga aur agar wo number set me hoga
+tu delete warna error nahi hoga"""
+ 
+
+
+# num.remove("n2")
+# print(num)
+
+# discard_method-----
+num.discard("n1")
+print(num)
