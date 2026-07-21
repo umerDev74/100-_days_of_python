@@ -1,5 +1,3 @@
-# 1. Questions ki list (Har element me: Question, Charo Options, aur Correct Option Number hai)
-
 questions = [
     [
     "which programing language is known as the language of AI?",
