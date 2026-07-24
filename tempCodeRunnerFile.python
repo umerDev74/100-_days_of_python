@@ -1,16 +1,20 @@
-num = {"n1","n2","n3"}
-num.add("n4")
-print(num)
+dic = {"Name":"Umer Nawaz", 35:"Roll No", "Male": True}
+# print(dic["Name"])
+# print(dic.get('Male2'))
+# print(dic[35])
 
-"""agar remove method me koi aisi chese remove karna jo set me hai hi nahi tu ye error de ga
-leikn agar ham dicard method use kare tu ye error nahi de ga aur agar wo number set me hoga
-tu delete warna error nahi hoga"""
- 
+# print(dic.keys())
+# print(dic.values())
+
+# # for value find with the help of keys
+# for key in dic.keys():
+#     print(dic[key])
 
 
-# num.remove("n2")
-# print(num)
+# for key in dic.keys():
+#     print(f"The corresponding to the key {key} is {dic[key]}")
 
-# discard_method-----
-num.discard("n1")
-print(num)
+
+print(dic.items())
+for key, value in dic.items():
+    print(f"The corresponding to the key {key} is {value}")
