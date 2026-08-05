@@ -1,3 +1,5 @@
+# **************** EXERCISE:NO:4, OF PYTHON 100 DAYS SERIES ****************
+
 import random
 
 # ----------- FUNCTION FOR ENCODED WORDS -----------
@@ -38,7 +40,7 @@ def decode_message(message):
 
 # ----------------- MAIN PROGRAM -----------------        
 
-print("***** Secret Code Language Program *****")
+print("\n***** Secret Code Language Program *****")
 while True:
     print("\n------------------------------------")
     choice = input("Do you want to Code, Decode or Quite? (c / d/ q): ").lower().strip()

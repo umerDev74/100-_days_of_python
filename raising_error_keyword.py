@@ -29,5 +29,5 @@ try:
     print("marks accepted")
 except InvalidMarksError as e:
     print(e)
-except ValueError:
+except ValueError:   
     print("please enter marks only!")
