@@ -1,63 +1,69 @@
-# **************** EXERCISE:NO:4, OF PYTHON 100 DAYS SERIES ****************
+# List of student names
+students = ["Ali", "Umer", "Ahmed", "Bilal", "Hamza"]
 
-import random
+# List of marks of each student
+marks = [78, 45, 89, 32, 67]
 
-# ----------- FUNCTION FOR ENCODED WORDS -----------
+# Variables to store total marks, passed students and failed students
+total_marks = 0
+passed = 0
+failed = 0
 
-def encode_message(message):
-    words = message.split()
-    encoded_words = []
+# Print the heading
+print("===== Student Result =====")
 
-    for word in words:
-        if len(word) <=2:
-            encoded_words.append(word[::-1])
-        else:
-            first_char = word[0]
-            middle = word[1:]
-            random_chars = ''.join(random.choices('abcdefghijklmnopqrstuvwxyz', k=3))
-            encoded_word = middle + first_char + random_chars
-            encoded_words.append(encoded_word)
+# Loop through all students
+for i in range(len(students)):
 
-    return ' '.join(encoded_words)
+    # Get the student name using index
+    name = students[i]
 
-# ------------ FUNCTION FOR DECODED WORDS -------------
+    # Get the marks using the same index
+    mark = marks[i]
 
-def decode_message(message):
-    words = message.split()
-    decode_words = []
+    # Add the student's marks to total marks
+    total_marks += mark
 
-    for word in words:
-        if len(word) < 3:
-            decode_words.append(word[::-1])
-        else:
-            body = word[:-3]  # last 3 random character remove
-            last_char = body[-1]
-            rest = body[:-1]
-            decoded_word = last_char + rest
-            decode_words.append(decoded_word)
-
-    return ' '.join(decode_words)
-
-# ----------------- MAIN PROGRAM -----------------        
-
-print("\n***** Secret Code Language Program *****")
-while True:
-    print("\n------------------------------------")
-    choice = input("Do you want to Code, Decode or Quite? (c / d/ q): ").lower().strip()
-
-    if choice == 'c':
-        msg = input("Enter message to code: ")
-        print("Encoded Message: ", encode_message(msg))
-
-    elif choice == 'd':
-        msg = input("Enter message to decode: ")
-        print("Decoded Message: ", decode_message(msg))
-
-    elif choice in ['q', 'exit']:
-        print("Exit program ... Good bye!")
-        break
-
+    # Check if the student has passed
+    if mark >= 50:
+        status = "Pass"
+        passed += 1
     else:
-        print("Invalid choice! please enter 'c' for code and 'd' for decode.")
+        # If marks are less than 50, student has failed
+        status = "Fail"
+        failed += 1
 
-print("\n------------ Thank you ------------\n")
+    # Print student's name
+    print(f"Name   : {name}")
+
+    # Print student's marks
+    print(f"Marks  : {mark}")
+
+    # Print student's result status
+    print(f"Status : {status}")
+
+    # Print a separator after each student
+    print("--------------------")
+
+
+# Calculate the average marks
+average = total_marks / len(marks)
+
+
+# Print the summary heading
+print("\n===== Summary =====")
+
+# Print total number of students
+print(f"Total Students : {len(students)}")
+
+# Print number of passed students
+print(f"Passed         : {passed}")
+
+# Print number of failed students
+print(f"Failed         : {failed}")
+
+# Print total marks of all students
+print(f"Total Marks    : {total_marks}")
+
+# Print average marks
+print(f"Average Marks  : {average:.2f}")
