@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+tempCodeRunnerFile*
+*.py.py
+venv/
+.venv/
