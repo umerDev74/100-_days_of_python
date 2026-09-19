@@ -1,0 +1,9 @@
+Umer,Python,85
+Umer,Math,78
+Umer,English,90
+Ali,Python,72
+Ali,Math,88
+Ali,English,75
+Zohaib,Python,92
+Zohaib,Math,81
+Zohaib,English,87
