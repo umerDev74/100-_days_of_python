@@ -14,3 +14,21 @@ print(e1.salary)
 e2 = Employee.from_string("Ali-60000")
 print(e2.name)
 print(e2.salary)
+
+#  ANOTHER EXAMPLE >>>>>>>>>>>
+
+class peerson:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def from_string(cls, string):
+        name, age = string.split(",")
+        return cls(name, int(age))
+        from_string = string
+
+p1 = peerson.from_string("zohaib, 25")
+print(p1.name, p1.age)
+
+    
